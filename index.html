@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>momentum ver2.0.0</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="momentum">
+    <div class="login-container">
+      <h3 id="today">YYYY-MM-DD</h3>
+      <h2 id="clock">00:00:00</h2>
+      <div class="me hidden"></div>
+      <form id="login-form" class="hidden">
+        <input type="text" id="login-input" class="login-input" autocomplete="off"
+          placeholder="Hello, what's your name?">
+        <!-- <button>Log In</button> -->
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+    </div>
+    <button id="todo-button" class="todo-button">To do</button>
+    <div class="todo-container hidden" id="todo-container">
+      <span>&#128204;</span>
+      <span id="todo" class="todo">todo</span>
+      <form id="todo-form" class="todo-form">
+        <input type="text" id="todo-input" placeholder="What is your main focus for today?" autocomplete="off">
+      </form>
+      <ul id="todo-list" class="todo-list"></ul>
+    </div>
+
+    <div class="today-weather">
+      <div class="locaion-icon icons">
+        <img src="./img/location_icon.png" alt="location">
+        <span id="location"></span>
+      </div>
+      <div class="temperature icons">
+        <img src="./img/temp_icon.png" alt="temperature">
+        <span id="temperature"></span>
+        <p>&#8451</p>
+      </div>
+      <div class="temperature icons">
+        <img src="./img/weather_icon.png" alt="weather">
+        <span id="weather"></span>
+      </div>
+    </div>
+
+    <button id="dday-toggle-button" class="dday-toggle-button">D-Day</button>
+    <div id="dday-container" class="dday-container hidden">
+      <span class="todo">&#128204;My D-day</span>
+      <div>
+        <form id="dday-form" class="dday-form">
+          <input type="date" id='dday-input' class="dday-input" />
+          <input type="text" id='dday-todo' class="dday-todo" placeholder="Your Goal" autocomplete="off" />
+        </form>
+      </div>
+      <ul id="dday-list" class="dday-list"></ul>
+    </div>
+
+    <div class="quote-container">
+      <span class="quote"></span>
+      <span class="author"></span>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/dday.js"></script>
+  <script src="js/quote.js"></script>
+</body>
+
+</html>
